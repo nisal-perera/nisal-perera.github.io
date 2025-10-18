@@ -15,7 +15,7 @@ keywords: legged robot, humanoids, locomotion # add your own keywords or leave e
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
-url: https://nisalperera.github.io
+url: https://nisal-perera.github.io
  # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
 last_updated: false # set to true if you want to display last updated in the footer
