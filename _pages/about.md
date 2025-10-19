@@ -6,7 +6,7 @@ subtitle: about me  #<a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc
 
 profile:
   align: right
-  image: prof_pic_nis.jpg
+  image: prof_pic.jpg
   image_circular: true # crops the image to make it circular
   more_info: >
     <p>LGRC</p>
