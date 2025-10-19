@@ -6,7 +6,7 @@ subtitle: about me  #<a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: prof_pic_nis.jpg
   image_circular: true # crops the image to make it circular
   more_info: >
     <p>LGRC</p>
@@ -18,7 +18,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Hello and welcome to my website! I'm Shangqun, a PhD student in Computer Science at UMass. My research focuses on enabling legged robots to walk, run, and jump using model-based optimal control and model-free reinforcement learning methods.
+Hello and welcome to my website! I'm Nisal, a PhD candidate in Computer Science at UMass Amherst. My research focuses on the design and development of legged robots, particularly humanoid systems, encompassing all aspects from mechanical and electrical design to high-level control. I explore novel optimal control strategies and learning-based control methods to enable agile and robust locomotion.
 
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
