@@ -1,25 +1,45 @@
 ---
 layout: page
-title: project 1
-description: with background image
-img: assets/img/12.jpg
+title: ProteanBot -- A Novel Mobile Platform for Healthcare Sector
+description: 
+img: assets/img/proteanbot_real.jpg
 importance: 1
 category: work
 related_publications: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+##Context
+In Sri Lankan healthcare sector, the patient facilitation process is done by medical staff. Therefore, the unavailability of dedicated staff members for patient facilitation through delivering medication, medical samples and even documents has forced the nursing staff or any other personnel with different expertise to carry out such tasks. This has caused problems in human resource allocation at the ‘National Institute for Nephrology Dialysis and Transplantation, Sri Lanka’ due to the limited staff members. The issues concerning transportation of dialysis solutions within the hospital were identified during a discussion with officials at the institute.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+In catering the same problem, the international healthcare sectors have moved on to the usage of robotics. Hence several mobile platforms have been developed commercially. However, these mobile robots might not be compatible within the local healthcare sector due to reasons such as unevenness of floors, unscheduled tasks, dimensional differences/non-uniform spacing within wards etc.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+With these issues, the adoption of readily available products has been difficult. Furthermore, the cost of a customized product can be high. Due to these reasons there is a lack of high end robots within the local healthcare sector. The mobile platform was developed in this project will consist of a mechanical system and algorithms that can cater the needs of Sri Lankan healthcare sector. 
+
+##Introduction
+
+Maneuverability, controllability and stability are fundamental characteristics of a wheeled mobile robot. The robots footprint is a key factor that determines the stability. Furthermore, it can often dictate the robots navigation abilities as well. Therefore, a wheeled mobile robot having the ability to vary its footprint can have flexible stability and the ability to navigate through space restricted areas. The currently available commercial mobile robots do not have the ability to vary footprint/size. In general a hospital environment is usually crowded and space restricted. The variable footprint capability is especially useful in such scenarios, where robot is navigating through a crowded environments with a payload. his project was focused on designing and developing a footprint varying mobile robot with sufficient maneuverability and payload carrying capacity.
+
+###<u>Aim</u>
+Enhancing the patient facilitation of Sri Lankan hospitals, by introducing an autonomous transportation system for indoor logistic tasks.
+
+###<u>Objectives</u>
+-To study on existing mobile platforms to identify suitable wheel configurations to carry the required payload and improve the maneuverability.
+-To design and develop the mechanical system of the mobile platform with variable footprint feature.
+-To develop a controller using suitable control algorithms to achieve autonomy.
+-To validate and test.
+
+##ProteanBot Design
+
+A novel transformable chassis with variable footprint capability and an actuation mechanism was designed. A key feature of ProteanBot is that the chassis transformation can be done using a single actuator. The proposed design can have footprint reductions up to 51% ideally.  The mobile platform also consists of a compatible suspension system to reduce ground induced vibrations. The fabricated prototype demonstrated footprint reductions up to 40%.
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/proteanbot_cad.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm-4 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/proteanbot_real.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -44,9 +64,7 @@ To give your project a background in the portfolio page, just add the img tag to
     This image can also have a caption. It's like magic.
 </div>
 
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
