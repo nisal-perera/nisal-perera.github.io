@@ -11,15 +11,13 @@ related_publications: true
 
 <style>
 .equal-height-img {
-  height: 220px;               /* ← set your desired uniform height */
+  height: 220px;               /* uniform visual height */
   width: 100%;
-  object-fit: cover;           /* crops edges, keeps nice proportions */
-  border-radius: 8px;          /* same rounded look as al-folio */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* optional soft shadow */
-  transition: transform 0.25s ease;      /* optional hover animation */
-}
-.equal-height-img:hover {
-  transform: scale(1.02);
+  object-fit: contain;         /* keep full image visible, no cropping */
+  background-color: #fafafa;   /* light neutral background for padding */
+  border-radius: 8px;          /* consistent rounded corners */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* soft shadow */
+  padding: 4px;                /* optional small inner padding */
 }
 </style>
 
@@ -49,10 +47,10 @@ A novel transformable chassis with variable footprint capability and an actuatio
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/proteanbot_cad.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/proteanbot_cad.jpg" title="example image" class="equal-height-img z-depth-1" %}
     </div>
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/proteanbot_real.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/proteanbot_real.jpg" title="example image" class="equal-height-img z-depth-1" %}
     </div>
 </div>
 
