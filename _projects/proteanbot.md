@@ -56,6 +56,3 @@ ProteanBot utilizes a map-based navigation methodology. The localization is done
         {% include figure.liquid loading="eager" path="assets/img/pb_slam.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-
-
-{% endraw %}
