@@ -16,7 +16,6 @@ profile:
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
-projects: true
 ---
 
 Hello and welcome to my website! I'm Nisal, a PhD candidate in Computer Science at UMass Amherst. My research focuses on the design and development of legged robots, particularly humanoid systems, encompassing all aspects from mechanical and electrical design to high-level control. I explore novel optimal control strategies and learning-based control methods to enable agile and robust locomotion.
