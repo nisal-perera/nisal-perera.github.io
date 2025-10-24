@@ -1,8 +1,8 @@
 ---
 layout: page
-title: ProteanBot -- A Novel Mobile Platform for Healthcare Sector
+title: Design of a Track-Leg Hybrid Locomotive Mobile Robot
 description: 
-img: assets/img/proteanbot_real.jpg
+img: assets/img/track_3.jpg
 importance: 1
 category: work
 related_publications: true

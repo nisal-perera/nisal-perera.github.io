@@ -1,81 +1,54 @@
 ---
 layout: page
-title: project 3 with very long name
-description: a project that redirects to another website
-img: assets/img/7.jpg
-redirect: https://unsplash.com
-importance: 3
+title: ExPiRo -- An External Pipe Crawling Robot
+description: 
+img: assets/img/expiro_2.jpg
+importance: 1
 category: work
+related_publications: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+<style>
+.equal-height-img {
+  height: 220px;               /* uniform visual height */
+  width: 100%;
+  object-fit: contain;         /* keep full image visible, no cropping */
+  background-color: #fafafa;   /* light neutral background for padding */
+  border-radius: 8px;          /* consistent rounded corners */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* soft shadow */
+  padding: 4px;                /* optional small inner padding */
+}
+</style>
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+<h2>Introduction</h2>
+
+In modern society, pipeline systems play a crucial role in conveying gas, water, sewage. Pipelines are used for long-distance transportation of a liquid or gas. The use of pipelines are useful for transporting water for drinking or irrigation over long distances when it needs to move over hills, or where canals or channels are poor choices due to considerations of evaporation, pollution, or environmental impact.
+
+Pipeline robots are at interest of local and international researchers for a long time as it serves the purpose of autonomous monitoring of pipelines internally and externally, in some cases operating as a substitute for human workers in pipeline maintenance related tasks. External pipeline robots are commonly used for pipe networks laid above the ground level and sometimes with a waterproof setup can also be used to monitor underwater pipeline networks as well.
+
+<h2>Robot Design</h2>
+
+ExPiRo utilizes wheeled locomotion for traveling on the curved surfaces of pipelines. It has a passive clutching mechanism based on a four-bar linkage that can adapt to the diameter of the pipe during locomotion. The wheels which will be addressed as rollers are designed to obtain the maximum grip between the robot and the pipe surfaces. The robot has a total of 8 driven rollers to provide propulsion. The robot structure has been optimized to reduce weight while maintaining required structural integrity.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/expiro_1.jpg" title="example image" class="equal-height-img z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/expiro_2.jpg" title="example image" class="equal-height-img z-depth-1" %}
     </div>
 </div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
+
+<h2>Control System</h2>
+
+Reaching a certain goal position on a pipeline system is a crucial capability for an external pipe crawling robot. Therefore, a PID controller which controls the position of the robot was designed. An ADAMS-MATLAB co-simulation was conducted to tune the gains of the controller. The tuned system demonstrated a significant ability for accurate goal reaching.
+
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
-
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/expiro_3.jpg" title="example image" class="equal-height-img z-depth-1" %}
+    </div>
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/expiro_4.jpg" title="example image" class="equal-height-img z-depth-1" %}
     </div>
 </div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
