@@ -8,6 +8,21 @@ category: work
 related_publications: true
 ---
 
+
+<style>
+.equal-height-img {
+  height: 220px;               /* ← set your desired uniform height */
+  width: 100%;
+  object-fit: cover;           /* crops edges, keeps nice proportions */
+  border-radius: 8px;          /* same rounded look as al-folio */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* optional soft shadow */
+  transition: transform 0.25s ease;      /* optional hover animation */
+}
+.equal-height-img:hover {
+  transform: scale(1.02);
+}
+</style>
+
 <h2>Context</h2>
 In Sri Lankan healthcare sector, the patient facilitation process is done by medical staff. Therefore, the unavailability of dedicated staff members for patient facilitation through delivering medication, medical samples and even documents has forced the nursing staff or any other personnel with different expertise to carry out such tasks. This has caused problems in human resource allocation at the ‘National Institute for Nephrology Dialysis and Transplantation, Sri Lanka’ due to the limited staff members. The issues concerning transportation of dialysis solutions within the hospital were identified during a discussion with officials at the institute.
 
@@ -47,12 +62,12 @@ ProteanBot utilizes a map-based navigation methodology. The localization is done
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/pb_arc.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/pb_arc.jpg" title="example image" class="equal-height-img z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/pb_cost.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/pb_cost.jpg" title="example image" class="equal-height-img z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/pb_slam.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/pb_slam.jpg" title="example image" class="equal-height-img z-depth-1" %}
     </div>
 </div>
