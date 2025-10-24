@@ -1,81 +1,64 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
-img: assets/img/3.jpg
-importance: 2
+title: ProteanBot -- A Novel Mobile Platform for Healthcare Sector
+description: 
+img: assets/img/proteanbot_real.jpg
+importance: 1
 category: work
-giscus_comments: true
+related_publications: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+<style>
+.equal-height-img {
+  height: 220px;               /* uniform visual height */
+  width: 100%;
+  object-fit: contain;         /* keep full image visible, no cropping */
+  background-color: #fafafa;   /* light neutral background for padding */
+  border-radius: 8px;          /* consistent rounded corners */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* soft shadow */
+  padding: 4px;                /* optional small inner padding */
+}
+</style>
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+<h2>Introduction</h2>
+
+Exploration of surface mining sites and other hazardous environments can be an extremely difficult task for a human being. Furthermore, EOD and other first responder situations pose life risks to the trained personnel. Therefore, researchers have been looking into the use of field robotics in these areas. In modern day we can observe various robots being used in this context, especially for EOD. 
+
+In order for a mobile robot to perform in an aforementioned scenario it should have sufficient mobility and dexterity. This project proposes a track-leg hybrid locomotive mobile robot with a 3 DOF robotic arm. The hybrid locomotion consists of a tracked locomotion mode and a legged locomotion mode, enabling the robot to have a higher mobility. The 3 DOF robotic manipulator which is mounted on the platform allows the robot to perform pick and place tasks, sample collection and inspection tasks. A storing chamber is designed in the upper portion of the robot to transport collected mineral samples etc.
+
+<h3><u>Aim</u></h3>
+Increasing the use of field robots in Sri Lanka for first responder situations and mining operations.
+
+<h3><u>Objectives</u></h3>
+-To design a mobile platform with high mobility and a 3 DOF robotic manipulator.
+-To propose a design framework for a track-leg mobile robot.
+
+<h2>Mobile Platform Design</h2>
+
+The mobile platform has four track-leg units to facilitate locomotion. The main components of a track-leg unit are sprockets, a track-arm and a track belt. A coaxial shaft configuration allows relative motion between the sprockets and track-arm, enabling hybrid locomotion. The hip joint is actuated by a direct drive motor during legged locomotion. Two motors transmits power to the track belts through a pair of chain drives. In this power transmission methodology each track-leg can be controlled independently during legged locomotion. Furthermore, a skid steering control strategy can be easily implemented for tracked locomotion. 
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/track_1.jpg" title="example image" class="equal-height-img z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/track_2.jpg" title="example image" class="equal-height-img z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/track_3.jpg" title="example image" class="equal-height-img z-depth-1" %}
     </div>
 </div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
+
+<h2>3 DOF Robotic Manipulator</h2>
+
+The 3 DOF serial robotic manipulator was designed for pick and placing tasks, inspection tasks and sample collecting. It can manipulate a maximum payload of 1kg. The manipulator is mounted at the front of the robot and can be easily detached. The end effector is a gripper with two fingers. A finite state machine was developed using simulink/simscape for the operation of the manipulator.
+
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
-
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
-
-<div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/track_4.jpg" title="example image" class="equal-height-img z-depth-1" %}
     </div>
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/track_5.jpg" title="example image" class="equal-height-img z-depth-1" %}
     </div>
 </div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
