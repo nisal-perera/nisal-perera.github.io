@@ -1,80 +1,57 @@
 ---
 layout: page
-title: project 5
-description: a project with a background image
-img: assets/img/1.jpg
-importance: 3
-category: fun
+title:  Microrobotic Systems and Magnetic Microactuators
+description: 
+img: assets/img/publication_preview/swim_microbot.gif
+importance: 1
+category: work
+related_publications: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+<style>
+.equal-height-img {
+  height: 220px;               /* uniform visual height */
+  width: 100%;
+  object-fit: contain;         /* keep full image visible, no cropping */
+  background-color: #fafafa;   /* light neutral background for padding */
+  border-radius: 8px;          /* consistent rounded corners */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* soft shadow */
+  padding: 4px;                /* optional small inner padding */
+}
+</style>
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+<h2>Introduction</h2>
+
+At the intersection of microfabrication, soft materials, and magnetics, my research focused on developing magnetic microactuators and microscale robotic systems for next-generation biomedical and lab-on-a-chip (LOC) applications. These miniature devices leverage soft magnetic materials and flexible polymer structures to achieve controlled motion and force output under low magnetic fields, enabling untethered actuation and manipulation at the microscale.
+Our work emphasized scalable actuator design, where modular magnetic structures and compliant beams are optimized for compactness, range of motion, and force efficiency. By integrating these actuators into microswimmers and micro-manipulation platforms, I explored new frontiers in controlled locomotion and object handling in viscous or non-Newtonian fluid environments.
+
+<h2>Methodology</h2>
+
+The proposed magnetic microactuator was designed to achieve compactness, high force output, and controllable motion under low magnetic field strengths. The actuator consists of three soft magnetic Ni-Fe (4750) blocks interconnected by two semi-circular Polydimethylsiloxane (PDMS) beams. A parametric design approach was employed to determine optimal dimensions for the magnetic blocks and compliant beams, balancing mechanical flexibility and magnetic flux density. The structural design was modeled using finite element analysis (FEA) to evaluate stress distribution, displacement response, and magnetic field interactions. A coupled magnetic–mechanical simulation framework was developed to study actuator deformation under varying magnetic field strengths. The simulation incorporated the nonlinear magnetic properties of Ni-Fe 4750 and the hyperelastic characteristics of PDMS. The actuator was exposed to uniform magnetic fields in the range of 80–160 kA/m, and the resulting displacements and forces were computed. The model outputs were analyzed to identify linearity in actuation characteristics and to predict the maximum displacement (111.6 µm) and force output (404.3 nN) under no-load conditions.
+
+To evaluate its functional potential, the actuator was integrated with a microswimmer platform featuring an artificial appendage performing rowing motion. The actuator’s angular displacement and stroke angle were analyzed to assess its suitability for untethered locomotion in viscous media. The fluid–structure interaction (FSI) simulations were performed to model the interaction between the flexible appendage and a non-Newtonian fluid, providing quantitative insight into the propulsion performance.
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
-
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/microbot3.jpg" title="example image" class="equal-height-img z-depth-1" %}
+    </div>
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/microbot4.jpg" title="example image" class="equal-height-img z-depth-1" %}
     </div>
 </div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+
+A numerical comparison was conducted between rectangular and circular appendage geometries to determine the optimal shape for propulsion efficiency. Each geometry was subjected to identical magnetic actuation conditions, and performance was evaluated using three criteria: propulsion force generation, deformation stability, and energy efficiency. Results indicated that the circular geometry achieved superior propulsion characteristics, confirming its suitability for microscale swimming applications.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/microbot1.jpg" title="example image" class="equal-height-img z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/microbot2.jpg" title="example image" class="equal-height-img z-depth-1" %}
+    </div>
 </div>
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
 
-{% raw %}
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
 
-{% endraw %}

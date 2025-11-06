@@ -2,7 +2,7 @@
 layout: page
 title: Design and Analysis of a Transdermal Drug Delivery System
 description: 
-img: assets/img/proteanbot_real.jpg
+img: assets/img/tdds_4.jpg
 importance: 1
 category: work
 related_publications: true
