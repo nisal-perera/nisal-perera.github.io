@@ -2,10 +2,12 @@
 layout: page
 title: StaccaToe -- A Single-Leg Robot that Mimics the Human Leg and Toe
 description: 
-img: assets/img/staccatoe.gif
+img: assets/img/publication_preview/staccatoe.gif
 importance: 2
 category: work
 related_publications: true
+featured: true
+blurb: "Human-scale single-leg robot with actuated toe and co-actuated knee for agile locomotion."
 ---
 
 

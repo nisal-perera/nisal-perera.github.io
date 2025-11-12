@@ -3,7 +3,7 @@ layout: page
 title: ExPiRo -- An External Pipe Crawling Robot
 description: 
 img: assets/img/expiro_2.jpg
-importance: 1
+importance: 6
 category: work
 related_publications: true
 ---
