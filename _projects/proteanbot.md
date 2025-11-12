@@ -3,7 +3,7 @@ layout: page
 title: ProteanBot -- A Novel Mobile Platform for Healthcare Sector
 description: 
 img: assets/img/proteanbot_real.jpg
-importance: 1
+importance: 4
 category: work
 related_publications: true
 ---
