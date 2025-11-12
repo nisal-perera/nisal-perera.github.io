@@ -41,26 +41,46 @@ layout: default
     <div class="clearfix">{{ content }}</div>
     <!-- Projects -->
     
-    {% assign highlighted = site.pages | where: "category", "work" | where: "featured", true | sort: "importance" %}
+  {%- comment -%}
+Collect all docs from pages + every collection (e.g., _pages, _projects) + posts
+{%- endcomment -%}
+{% assign all_docs = site.pages %}
+{% for c in site.collections %}
+  {% assign all_docs = all_docs | concat: c.docs %}
+{% endfor %}
+{% if site.posts %}
+  {% assign all_docs = all_docs | concat: site.posts %}
+{% endif %}
 
-{% if highlighted and highlighted.size > 0 %}
+{%- comment -%}
+Filter for featured work items and sort by importance (fallback to title)
+{%- endcomment -%}
+{% assign highlighted = all_docs | where: "featured", true | where: "category", "work" %}
+{% assign highlighted = highlighted | sort: "importance" %}
+{% if highlighted == empty %}
+  {%- comment -%} Nothing matched; show nothing silently {%- endcomment -%}
+{% else %}
   <h2>highlighted projects</h2>
   <div class="projects-grid">
     {% for p in highlighted %}
       <a class="project-card" href="{{ p.url | relative_url }}">
         <div class="project-thumb">
           {% if p.img %}
-            {% include figure.liquid 
+            {% include figure.liquid
               loading="lazy"
               path=p.img
               class="project-img"
               alt=p.title
               cache_bust=true
             %}
+          {% else %}
+            <div class="project-img" style="display:flex;align-items:center;justify-content:center;">
+              <span style="opacity:.6;padding:1rem;">No preview</span>
+            </div>
           {% endif %}
         </div>
         <div class="project-meta">
-          <div class="project-title">{{ p.title }}</div>
+          <div class="project-title">{{ p.title | default: "Untitled project" }}</div>
           {% if p.blurb %}
             <div class="project-blurb">{{ p.blurb }}</div>
           {% endif %}
@@ -69,6 +89,7 @@ layout: default
     {% endfor %}
   </div>
 {% endif %}
+
 
     <!-- News -->
     {% if page.news and site.announcements.enabled %}
