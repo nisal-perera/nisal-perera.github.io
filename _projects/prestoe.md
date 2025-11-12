@@ -2,10 +2,12 @@
 layout: page
 title: Prestoe -- A Humanoid Robot with Actuated Toe
 description: 
-img: assets/img/pres3.png
+img: assets/img/pres0.jpg
 importance: 1
 category: work
-related_publications: true
+related_publications: false
+featured: true
+blurb: "Humanoid robot with actuated toes for energy efficient locomotion."
 ---
 
 

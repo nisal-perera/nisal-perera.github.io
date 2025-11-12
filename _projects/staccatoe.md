@@ -71,7 +71,7 @@ StaccaToe uses a Whole-Body Impulse Control (WBIC) framework for balance and dyn
 
 <div style="text-align:center; margin: 20px 0;">
   <iframe width="640" height="360" 
-          src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+          src="https://www.youtube.com/watch?v=jZwrF528Fg0" 
           title="StaccaToe Demo" 
           frameborder="0" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
