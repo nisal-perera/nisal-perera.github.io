@@ -3,7 +3,7 @@ layout: page
 title: Design of a Track-Leg Hybrid Locomotive Mobile Robot
 description: 
 img: assets/img/track_3.jpg
-importance: 1
+importance: 5
 category: work
 related_publications: true
 ---

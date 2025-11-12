@@ -3,7 +3,7 @@ layout: page
 title:  Microrobotic Systems and Magnetic Microactuators
 description: 
 img: assets/img/publication_preview/swim_microbot.gif
-importance: 1
+importance: 3
 category: work
 related_publications: true
 ---
