@@ -18,6 +18,39 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
+<style>
+  .profile.float-right {
+    width: min(36%, 430px);
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .profile img.rounded {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .profile .more-info {
+    margin-top: 0.9rem;
+    line-height: 1.35;
+  }
+
+  .profile .more-info p {
+    display: block;
+  }
+
+  @media (max-width: 767px) {
+    .profile.float-right {
+      float: none !important;
+      width: 100%;
+      max-width: 430px;
+      margin: 0 auto 1.5rem;
+    }
+  }
+</style>
+
 Hello and welcome to my website! I'm Nisal, a PhD candidate in Computer Science at UMass Amherst. My research focuses on the design and development of legged robots, particularly humanoid systems, encompassing all aspects from mechanical and electrical design to high-level control. I explore novel optimal control strategies and learning-based control methods to enable agile and robust locomotion.
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.

@@ -21,6 +21,22 @@ blurb: "Human-scale single-leg robot with actuated toe and co-actuated knee for 
   box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* soft shadow */
   padding: 4px;                /* optional small inner padding */
 }
+
+.featured-video {
+  max-width: 900px;
+  margin: 2rem auto;
+}
+
+.featured-video figure {
+  aspect-ratio: 16 / 9;
+  margin: 0;
+}
+
+.featured-video iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
 </style>
 
 <h2>Introduction</h2>
@@ -69,8 +85,8 @@ StaccaToe uses a Whole-Body Impulse Control (WBIC) framework for balance and dyn
     </div>
 </div>
 
-<div class="row mt-3">
-  <div class="col-sm mt-3 mt-md-0">
+<div class="featured-video">
+  <div>
     {% include video.liquid path="https://www.youtube.com/embed/jZwrF528Fg0" class="img-fluid rounded z-depth-1" title="StaccaToe Demo" %}
   </div>
 </div>
