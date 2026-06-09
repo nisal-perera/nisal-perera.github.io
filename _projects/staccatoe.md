@@ -39,6 +39,10 @@ blurb: "Human-scale single-leg robot with actuated toe and co-actuated knee for 
 }
 </style>
 
+<div class="related-publication-citations" style="display: none;">
+  {% cite perera2024staccatoesinglelegrobotmimics %}
+</div>
+
 <h2>Introduction</h2>
 
 The StaccaToe project introduces a human-scale, electric-motor-powered single-leg robot aimed at replicating the agility of the human leg and foot. Unlike many prior systems that depend on springs, clutches, hydraulics or pneumatics, StaccaToe uses direct electric actuation without energy-storage mechanisms, marking a step toward practical, high-performance robotics. Two core biomechanical inspirations drive the design: an actuated toe (to enable human-like foot mechanics) and a co-actuation configuration at the knee (to boost force output and agility).

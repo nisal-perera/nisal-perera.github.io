@@ -19,7 +19,29 @@ related_publications: true
   box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* soft shadow */
   padding: 4px;                /* optional small inner padding */
 }
+
+.featured-video {
+  max-width: 900px;
+  margin: 2rem auto;
+}
+
+.featured-video figure {
+  aspect-ratio: 16 / 9;
+  margin: 0;
+}
+
+.featured-video iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
 </style>
+
+<div class="related-publication-citations" style="display: none;">
+  {% cite app122211542 %}
+  {% cite 9525635 %}
+  {% cite kankanige2022 %}
+</div>
 
 <h2>Introduction</h2>
 
@@ -52,6 +74,12 @@ A numerical comparison was conducted between rectangular and circular appendage 
     </div>
 </div>
 
+<h2>Presentation Video</h2>
 
+<div class="featured-video">
+    <div>
+        {% include video.liquid path="https://drive.google.com/file/d/1-kofj6jrM-OoUheTokwfASN0sIvn3w6j/preview" class="img-fluid rounded z-depth-1" title="Microrobotic Systems Presentation" %}
+    </div>
+</div>
 
 

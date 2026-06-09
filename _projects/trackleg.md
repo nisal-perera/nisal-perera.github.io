@@ -21,6 +21,10 @@ related_publications: true
 }
 </style>
 
+<div class="related-publication-citations" style="display: none;">
+  {% cite 9268332 %}
+</div>
+
 <h2>Introduction</h2>
 
 Exploration of surface mining sites and other hazardous environments can be an extremely difficult task for a human being. Furthermore, EOD and other first responder situations pose life risks to the trained personnel. Therefore, researchers have been looking into the use of field robotics in these areas. In modern day we can observe various robots being used in this context, especially for EOD. 

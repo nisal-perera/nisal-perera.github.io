@@ -21,6 +21,10 @@ related_publications: true
 }
 </style>
 
+<div class="related-publication-citations" style="display: none;">
+  {% cite 9185328 %}
+</div>
+
 <h2>Motivation</h2>
 Many pharmaceutical drugs used for various diseases have systemic side effects due to sudden fluctuation in the blood level profile. This includes medication such as Insulin (to maintain the blood sugar level) and Levodopa (treatment of Parkinson’s Disease). In addition to this the use of injections using hypodermic needles have their own disadvantages such as the time taken for healing of the damaged skin and also the psychological effect of using hypodermic needles on the patient. Transdermal patches have helped in avoiding these disadvantages. Transdermal drug patches help in diffusing the drug through the skin with a predetermined controlled release rate. The main drawback of this method is that only drugs with small molecular sizes can diffuse through the stratum corneum layer of the skin. 
 

@@ -21,6 +21,10 @@ related_publications: true
 }
 </style>
 
+<div class="related-publication-citations" style="display: none;">
+  {% cite 9310831 %}
+</div>
+
 <h2>Introduction</h2>
 
 In modern society, pipeline systems play a crucial role in conveying gas, water, sewage. Pipelines are used for long-distance transportation of a liquid or gas. The use of pipelines are useful for transporting water for drinking or irrigation over long distances when it needs to move over hills, or where canals or channels are poor choices due to considerations of evaporation, pollution, or environmental impact.

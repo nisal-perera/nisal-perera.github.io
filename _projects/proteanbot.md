@@ -21,6 +21,10 @@ related_publications: true
 }
 </style>
 
+<div class="related-publication-citations" style="display: none;">
+  {% cite perera2025variablefootprint %}
+</div>
+
 <h2>Context</h2>
 In Sri Lankan healthcare sector, the patient facilitation process is done by medical staff. Therefore, the unavailability of dedicated staff members for patient facilitation through delivering medication, medical samples and even documents has forced the nursing staff or any other personnel with different expertise to carry out such tasks. This has caused problems in human resource allocation at the ‘National Institute for Nephrology Dialysis and Transplantation, Sri Lanka’ due to the limited staff members. The issues concerning transportation of dialysis solutions within the hospital were identified during a discussion with officials at the institute.
 
