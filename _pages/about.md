@@ -29,7 +29,7 @@ social: true # includes social icons at the bottom of the page
     width: 100%;
     aspect-ratio: 4 / 5;
     object-fit: cover;
-    object-position: center top;
+    object-position: center bottom;
   }
 
   .profile .more-info {
