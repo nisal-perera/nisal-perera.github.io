@@ -6,8 +6,8 @@ subtitle: about me  #<a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc
 
 profile:
   align: right
-  image: prof_pic_nis.JPG
-  image_circular: true # crops the image to make it circular
+  image: homepage-profile.png
+  image_circular: false # crops the image to make it circular
   more_info: >
     <p>LGRC</p>
     <p>740 N Pleasant St</p>
