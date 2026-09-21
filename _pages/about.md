@@ -2,16 +2,12 @@
 layout: about
 title: about
 permalink: /
-subtitle: about me  #<a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: Building legged robots for agile and robust locomotion.
 
 profile:
   align: right
-  image: homepage-profile.png
+  image: prof_pic_nis.JPG
   image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>LGRC</p>
-    <p>740 N Pleasant St</p>
-    <p>Amherst, MA 01002</p>
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
@@ -20,16 +16,16 @@ social: true # includes social icons at the bottom of the page
 
 <style>
   .profile.float-right {
-    width: min(36%, 430px);
-    margin-left: 2rem;
+    width: min(30%, 260px);
+    margin-left: 1.75rem;
     margin-bottom: 1rem;
   }
 
   .profile img.rounded {
     width: 100%;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
-    object-position: center bottom;
+    object-position: center;
   }
 
   .profile .more-info {
@@ -45,13 +41,15 @@ social: true # includes social icons at the bottom of the page
     .profile.float-right {
       float: none !important;
       width: 100%;
-      max-width: 430px;
+      max-width: 260px;
       margin: 0 auto 1.5rem;
     }
   }
 </style>
 
-Hello and welcome to my website! I'm Nisal, a PhD candidate in Computer Science at UMass Amherst. My research focuses on the design and development of legged robots, particularly humanoid systems, encompassing all aspects from mechanical and electrical design to high-level control. I explore novel optimal control strategies and learning-based control methods to enable agile and robust locomotion.
+Hi, I'm Nisal! I'm a Ph.D. candidate in Computer Science at UMass Amherst. My research focuses on the design and control of legged robots, especially humanoid systems, spanning mechanical and electrical design through high-level control.
+
+I work on optimal control and learning-based methods that help robots walk, run, and jump with agility and robustness in the real world. My broader goal is to build capable robotic systems that can move reliably through challenging environments and eventually support people in useful, everyday ways.
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
