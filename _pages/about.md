@@ -6,7 +6,7 @@ subtitle: Building legged robots for agile and robust locomotion.
 
 profile:
   align: right
-  image: prof_pic_nis.JPG
+  image: homepage-profile.png
   image_circular: false # crops the image to make it circular
 
 news: true # includes a list of news items
@@ -23,7 +23,7 @@ social: true # includes social icons at the bottom of the page
 
   .profile img.rounded {
     width: 100%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 4 / 5;
     object-fit: cover;
     object-position: center;
   }
@@ -47,7 +47,7 @@ social: true # includes social icons at the bottom of the page
   }
 </style>
 
-Hi, I'm Nisal! I'm a Ph.D. candidate in Computer Science at UMass Amherst. My research focuses on the design and control of legged robots, especially humanoid systems, spanning mechanical and electrical design through high-level control.
+Hi, I'm Nisal! I'm a Ph.D. candidate in Computer Science at UMass Amherst, advised by [Prof. Donghyun Kim](https://scholar.google.com/citations?user=uVZrpMcAAAAJ&hl=en). My research focuses on the design and control of legged robots, especially humanoid systems, spanning mechanical and electrical design through high-level control.
 
 I work on optimal control and learning-based methods that help robots walk, run, and jump with agility and robustness in the real world. My broader goal is to build capable robotic systems that can move reliably through challenging environments and eventually support people in useful, everyday ways.
 
