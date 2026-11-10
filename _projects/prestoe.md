@@ -104,7 +104,7 @@ State feedback closes the loop between the robot and the control stack. Hardware
 
 Velocity-tracking and motion-tracking policies use a shared **mjlab + RSL-RL** training pipeline, with parallel simulation in MuJoCo Warp and PPO training. Training varies dynamics, observation noise, and disturbances. Exported policies run on PresToe through the same control interface.
 
-The hardware demonstrations below show walking and turning with velocity-tracking policies, and moonwalking with a motion-tracking policy. These are preliminary demonstrations; robustness still needs improvement.
+Hardware experiments demonstrate walking and turning with velocity-tracking policies, and moonwalking with a motion-tracking policy. These are preliminary demonstrations; robustness still needs improvement.
 
 <div class="video-grid">
 {% assign locomotion_clips = 'walking|Walking — velocity tracking,turning|Turning — velocity tracking,moonwalking|Moonwalking — motion tracking' | split: ',' %}
