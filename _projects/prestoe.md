@@ -12,10 +12,6 @@ blurb: "A 23-DoF humanoid with co-actuated legs and articulated toes."
 
 <style>
 .prestoe-page .equal-height-img { height: 220px; width: 100%; object-fit: contain; background: #fafafa; border-radius: 8px; padding: 4px; }
-.prestoe-page .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
-.prestoe-page .video-grid figure { margin: 0; }
-.prestoe-page video { width: 100%; height: 320px; object-fit: contain; background: #111; border-radius: 8px; }
-.prestoe-page figcaption { margin-top: .65rem; font-size: .9rem; }
 .prestoe-page .control-flow { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .75rem; margin: 1.5rem 0; }
 .prestoe-page .control-block { flex: 1 1 150px; padding: 1rem; border: 1px solid var(--global-divider-color); border-radius: 8px; text-align: center; }
 </style>
@@ -60,16 +56,6 @@ Custom encoder boards measure the distal joints directly: 10-bit MA3 encoders at
 
 FreshESB provides a wireless link from distal sensors to the torso, avoiding sensor wires across moving joints. A compact custom transceiver and scheduled communication protocol support sub-millisecond feedback. Bench tests measured a median latency of 250 µs. On PresToe, more than 99.9% of received packets arrived within 1 ms across four test conditions; packet delivery during motion ranged from 97.6% to 99.3%.
 
-<div class="video-grid">
-  <figure>
-    <video controls playsinline preload="none" poster="{{ '/assets/video/prestoe/wireless-sensing.png' | relative_url }}" aria-label="Wireless sensing experiment on PresToe">
-      <source src="{{ '/assets/video/prestoe/wireless-sensing.mp4' | relative_url }}" type="video/mp4">
-      <a href="{{ '/assets/video/prestoe/wireless-sensing.mp4' | relative_url }}">Download the wireless sensing video</a>.
-    </video>
-    <figcaption>Foot-to-torso wireless sensing experiments on the robot.</figcaption>
-  </figure>
-</div>
-
 ## Control architecture
 
 Whole-body controllers and learned policies share a robot control interface. An impedance regulator connects joint-level commands to the coupled actuators, using motor and joint feedback. Fast local feedback remains on the motor boards.
@@ -86,38 +72,10 @@ Whole-body controllers and learned policies share a robot control interface. An 
 
 State feedback closes the loop between the robot and the control stack. Hardware demonstrations include whole-body-control squatting, toe-supported balance, and an RL standing policy.
 
-<div class="video-grid">
-{% assign balance_clips = 'wbc-squat|Whole-body-control squat,toe-stand|Whole-body-control toe stand,rl-stand|RL standing' | split: ',' %}
-{% for clip in balance_clips %}
-{% assign details = clip | split: '|' %}
-  <figure>
-    <video controls playsinline preload="none" poster="{{ '/assets/video/prestoe/' | append: details[0] | append: '.png' | relative_url }}" aria-label="{{ details[1] }}">
-      <source src="{{ '/assets/video/prestoe/' | append: details[0] | append: '.mp4' | relative_url }}" type="video/mp4">
-      <a href="{{ '/assets/video/prestoe/' | append: details[0] | append: '.mp4' | relative_url }}">Download {{ details[1] }}</a>.
-    </video>
-    <figcaption>{{ details[1] }} on PresToe hardware.</figcaption>
-  </figure>
-{% endfor %}
-</div>
-
 ## Learning-based locomotion
 
 Velocity-tracking and motion-tracking policies use a shared **mjlab + RSL-RL** training pipeline, with parallel simulation in MuJoCo Warp and PPO training. Training varies dynamics, observation noise, and disturbances. Exported policies run on PresToe through the same control interface.
 
 Hardware experiments demonstrate walking and turning with velocity-tracking policies, and moonwalking with a motion-tracking policy. These are preliminary demonstrations; robustness still needs improvement.
-
-<div class="video-grid">
-{% assign locomotion_clips = 'walking|Walking — velocity tracking,turning|Turning — velocity tracking,moonwalking|Moonwalking — motion tracking' | split: ',' %}
-{% for clip in locomotion_clips %}
-{% assign details = clip | split: '|' %}
-  <figure>
-    <video controls playsinline preload="none" poster="{{ '/assets/video/prestoe/' | append: details[0] | append: '.png' | relative_url }}" aria-label="{{ details[1] }}">
-      <source src="{{ '/assets/video/prestoe/' | append: details[0] | append: '.mp4' | relative_url }}" type="video/mp4">
-      <a href="{{ '/assets/video/prestoe/' | append: details[0] | append: '.mp4' | relative_url }}">Download {{ details[1] }}</a>.
-    </video>
-    <figcaption>{{ details[1] }}.</figcaption>
-  </figure>
-{% endfor %}
-</div>
 
 </div>
