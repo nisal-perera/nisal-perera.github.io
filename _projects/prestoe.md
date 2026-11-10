@@ -1,77 +1,123 @@
 ---
 layout: page
-title: Prestoe -- A Humanoid Robot with Actuated Toe
-description: 
+title: PresToe — A Humanoid Robot with Actuated Toes
+description: "Co-actuated humanoid hardware, integrated sensing, and whole-body control."
 img: assets/img/pres0.jpg
 importance: 1
 category: work
 related_publications: false
 featured: true
-blurb: "Humanoid robot with actuated toes for energy efficient locomotion."
+blurb: "A 23-DoF humanoid with co-actuated legs and articulated toes."
 ---
 
-
 <style>
-.equal-height-img {
-  height: 220px;               /* uniform visual height */
-  width: 100%;
-  object-fit: contain;         /* keep full image visible, no cropping */
-  background-color: #fafafa;   /* light neutral background for padding */
-  border-radius: 8px;          /* consistent rounded corners */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* soft shadow */
-  padding: 4px;                /* optional small inner padding */
-}
+.prestoe-page .equal-height-img { height: 220px; width: 100%; object-fit: contain; background: #fafafa; border-radius: 8px; padding: 4px; }
+.prestoe-page .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+.prestoe-page .video-grid figure { margin: 0; }
+.prestoe-page video { width: 100%; height: 320px; object-fit: contain; background: #111; border-radius: 8px; }
+.prestoe-page figcaption { margin-top: .65rem; font-size: .9rem; }
+.prestoe-page .control-flow { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .75rem; margin: 1.5rem 0; }
+.prestoe-page .control-block { flex: 1 1 150px; padding: 1rem; border: 1px solid var(--global-divider-color); border-radius: 8px; text-align: center; }
 </style>
 
-<h2>Introduction</h2>
+<div class="prestoe-page" markdown="1">
 
-PresToe is a human-scale humanoid robot designed to extend the biomechanical innovations first introduced in StaccaToe — namely, co-actuated joints and an actuated toe mechanism to explore energy efficient humanoid locomotion. Standing approximately 1.32 m tall and weighing around 31–32 kg, PresToe features 23 actuated degrees of freedom, with electrically powered joints throughout. It represents a major step toward human-like legged locomotion that combines biomechanical fidelity, control robustness, and full-body coordination. The project advances toward whole-body dynamic behaviors such as running, leaping, and balancing, powered entirely by onboard computation and energy systems.
- 
+## From biomechanics to humanoid hardware
 
-<h2>Robot Design Highlights</h2>
-PresToe’s leg employs a 7-DOF configuration per leg, inspired by human joint synergy. The robot adopts co-actuation and actuated toe mechanisms refined from StaccaToe. The crossed four-bar and spatial six-bar linkages map motor space to joint space, enabling torque amplification at critical motion phases. Co-actuation between knee and ankle allows dynamic force sharing during stance and push-off, improving energy efficiency and torque output.
+PresToe is a human-scale humanoid that brings co-actuation and articulated toes to a complete robot. Building on StaccaToe, its coupled leg transmission allows several actuators to contribute to a joint's motion, taking inspiration from human muscle coordination. The platform combines mechanical design, custom electronics, joint sensing, and whole-body control.
 
-The robot adopts co-actuation and actuated toe mechanisms refined from StaccaToe:
+At approximately **1.32 m tall and 32 kg**, PresToe has **23 actuated degrees of freedom**: seven in each leg, four in each arm, and one at the waist. Each leg includes hip yaw, roll, and pitch; knee pitch; ankle pitch and roll; and an actuated toe.
 
-<li>The crossed four-bar and spatial six-bar linkages map motor space to joint space, enabling torque amplification at critical motion phases.</li>
-<li>Co-actuation between knee and ankle allows dynamic force sharing during stance and push-off, improving energy efficiency and torque output.</li>
+## Mechanical design
 
-<b>Structural and Transmission Design:</b> PresToe’s structural components were designed through finite element analysis (FEA) and topology optimization, guided by control-aware design principles. The mechanical layout and load paths were informed by optimal control simulation results, ensuring that the leg structure can withstand forces generated during dynamic motions such as running at 2 m/s and leaping maneuvers. This co-design process between control and structure resulted in components with minimum safety factors above 2.0, balancing lightweight construction with robustness. A redesigned belt-drive transmission with larger pulley diameters (30 mm vs 17 mm) reduces hysteresis losses by 48% compared to StaccaToe, minimizing energy dissipation during cyclic bending and improving backdrivability.
+The leg combines belt drives and closed-chain linkages to coordinate knee, ankle, and toe motion. Co-actuation lets multiple motors share joint loads, while the articulated toe provides an additional contact and push-off degree of freedom.
 
-High-stiffness EV5GT timing belts (12 mm width, 5 mm pitch) were selected based on experimental tensile testing using an Instron material tester, ensuring consistent torque transfer and minimal compliance in high-load joints.
+- **Belt transmission:** tensioner/idler pulley diameter increased from 17 mm to 30 mm. The revised design has an estimated 48% reduction in belt-bending loss, a design estimate rather than a measured whole-robot energy saving.
+- **Experimentally selected belts:** Instron testing guided the selection of 12 mm-wide EV5GT belts. Ankle and toe belt stiffness increased by 26.6% and 14.8%, respectively; the knee achieved similar stiffness with a narrower belt, reduced from 15 mm to 12 mm.
+- **Control-aware structural design:** trajectory optimization of 2 m/s running and leaping supplied peak foot loads of approximately 1 kN for structural analysis. All links were designed for a safety factor of at least two. Running and leaping were design simulations.
 
-</ul>
 <div class="row">
-    <div class="col-sm-6 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/pres1.jpg" title="example image" class="equal-height-img z-depth-1" %}
-    </div>
-    <div class="col-sm-3 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/pres2.png" title="example image" class="equal-height-img z-depth-1" %}
-    </div>
-     <div class="col-sm-3 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/pres3.png" title="example image" class="equal-height-img z-depth-1" %}
-    </div>
+  <div class="col-sm-6">{% include figure.liquid path="assets/img/pres1.jpg" alt="PresToe mechanical design" class="equal-height-img" %}</div>
+  <div class="col-sm-3">{% include figure.liquid path="assets/img/pres2.png" alt="PresToe leg structure" class="equal-height-img" %}</div>
+  <div class="col-sm-3">{% include figure.liquid path="assets/img/pres3.png" alt="PresToe transmission design" class="equal-height-img" %}</div>
 </div>
 
-<h2>Electronics and Motor Control</h2>
+## Electronics, sensing, and communication
 
-A custom 48 V power distribution board was developed to supply all actuators and auxiliary electronics, ensuring reliable high-current delivery while maintaining electrical isolation and protection.
+I designed and implemented the electronics layout, wiring, power distribution, and communication hierarchy. The torso integrates an UP Xtreme control computer, a Jetson AGX Orin for additional processing, a VN-100 IMU, an event camera, a RealSense depth camera, and two 24 V batteries.
 
-The communication backbone employs three CAN 2.0 buses interfaced through a custom CAN communication board built around Teensy 4.1 microcontrollers, which bridge the actuator network to the onboard computer via Ethernet UDP. This setup achieves an average communication bandwidth of 1.17 kHz, supporting real-time torque and state feedback across all joints.
+The custom communication board uses **three Teensy 4.1 microcontrollers**, each with Ethernet and three CAN interfaces. Ethernet UDP connects the control computer to the CAN 2.0 actuator network, with two actuators per bus. Mean communication latency is **855 µs**, corresponding to approximately **1.2 kHz**, compared with StaccaToe's 500 Hz link.
 
-In addition, custom encoder boards were designed specifically to measure ankle pitch and roll angles, each based on an AT90CAN128 MCU integrated with absolute magnetic encoders (MA3 and TLE5012BE1000). These boards provide direct CAN communication and enable precise joint angle estimation through PWM or SPI interfaces, ensuring accurate low-latency feedback for the robot’s balance-critical joints.
-
-The entire electronics layout, wiring scheme, and communication hierarchy—including the power distribution, CAN buses, and sensor interfacing—were designed and implemented by me.
-
+Custom encoder boards measure the distal joints directly: 10-bit MA3 encoders at the toe and ankle roll, and a 15-bit TLE5012 sensor at ankle pitch. An AT90CAN128 microcontroller reads all three joints and reports over CAN, providing joint feedback alongside the motor encoders.
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/pres4.jpg" title="example image" class="equal-height-img z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/pres5.jpg" title="example image" class="equal-height-img z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/pres6.png" title="example image" class="equal-height-img z-depth-1" %}
-    </div>
+  <div class="col-sm">{% include figure.liquid path="assets/img/pres4.jpg" alt="PresToe custom electronics" class="equal-height-img" %}</div>
+  <div class="col-sm">{% include figure.liquid path="assets/img/pres5.jpg" alt="PresToe electronics integration" class="equal-height-img" %}</div>
+  <div class="col-sm">{% include figure.liquid path="assets/img/pres6.png" alt="PresToe sensing and communication hardware" class="equal-height-img" %}</div>
+</div>
+
+### Wireless sensing
+
+FreshESB provides a wireless link from distal sensors to the torso, avoiding sensor wires across moving joints. A compact custom transceiver and scheduled communication protocol support sub-millisecond feedback. Bench tests measured a median latency of 250 µs. On PresToe, more than 99.9% of received packets arrived within 1 ms across four test conditions; packet delivery during motion ranged from 97.6% to 99.3%.
+
+<div class="video-grid">
+  <figure>
+    <video controls playsinline preload="none" poster="{{ '/assets/video/prestoe/wireless-sensing.png' | relative_url }}" aria-label="Wireless sensing experiment on PresToe">
+      <source src="{{ '/assets/video/prestoe/wireless-sensing.mp4' | relative_url }}" type="video/mp4">
+      <a href="{{ '/assets/video/prestoe/wireless-sensing.mp4' | relative_url }}">Download the wireless sensing video</a>.
+    </video>
+    <figcaption>Foot-to-torso wireless sensing experiments on the robot.</figcaption>
+  </figure>
+</div>
+
+## Control architecture
+
+Whole-body controllers and learned policies share a robot control interface. An impedance regulator connects joint-level commands to the coupled actuators, using motor and joint feedback. Fast local feedback remains on the motor boards.
+
+<div class="control-flow" role="img" aria-label="Whole-body controller or learned policy sends joint commands through the impedance regulator and motor boards to PresToe. Motor and joint sensing provide state feedback.">
+  <div class="control-block">Whole-body controller<br>or learned policy</div>
+  <span aria-hidden="true">→</span>
+  <div class="control-block">Impedance regulator</div>
+  <span aria-hidden="true">→</span>
+  <div class="control-block">Motor boards<br>Local feedback</div>
+  <span aria-hidden="true">→</span>
+  <div class="control-block">PresToe<br>Motor &amp; joint sensing</div>
+</div>
+
+State feedback closes the loop between the robot and the control stack. Hardware demonstrations include whole-body-control squatting, toe-supported balance, and an RL standing policy.
+
+<div class="video-grid">
+{% assign balance_clips = 'wbc-squat|Whole-body-control squat,toe-stand|Whole-body-control toe stand,rl-stand|RL standing' | split: ',' %}
+{% for clip in balance_clips %}
+{% assign details = clip | split: '|' %}
+  <figure>
+    <video controls playsinline preload="none" poster="{{ '/assets/video/prestoe/' | append: details[0] | append: '.png' | relative_url }}" aria-label="{{ details[1] }}">
+      <source src="{{ '/assets/video/prestoe/' | append: details[0] | append: '.mp4' | relative_url }}" type="video/mp4">
+      <a href="{{ '/assets/video/prestoe/' | append: details[0] | append: '.mp4' | relative_url }}">Download {{ details[1] }}</a>.
+    </video>
+    <figcaption>{{ details[1] }} on PresToe hardware.</figcaption>
+  </figure>
+{% endfor %}
+</div>
+
+## Learning-based locomotion
+
+Velocity-tracking and motion-tracking policies use a shared **mjlab + RSL-RL** training pipeline, with parallel simulation in MuJoCo Warp and PPO training. Training varies dynamics, observation noise, and disturbances. Exported policies run on PresToe through the same control interface.
+
+The hardware demonstrations below show walking and turning with velocity-tracking policies, and moonwalking with a motion-tracking policy. These are preliminary demonstrations; robustness still needs improvement.
+
+<div class="video-grid">
+{% assign locomotion_clips = 'walking|Walking — velocity tracking,turning|Turning — velocity tracking,moonwalking|Moonwalking — motion tracking' | split: ',' %}
+{% for clip in locomotion_clips %}
+{% assign details = clip | split: '|' %}
+  <figure>
+    <video controls playsinline preload="none" poster="{{ '/assets/video/prestoe/' | append: details[0] | append: '.png' | relative_url }}" aria-label="{{ details[1] }}">
+      <source src="{{ '/assets/video/prestoe/' | append: details[0] | append: '.mp4' | relative_url }}" type="video/mp4">
+      <a href="{{ '/assets/video/prestoe/' | append: details[0] | append: '.mp4' | relative_url }}">Download {{ details[1] }}</a>.
+    </video>
+    <figcaption>{{ details[1] }}.</figcaption>
+  </figure>
+{% endfor %}
+</div>
+
 </div>
